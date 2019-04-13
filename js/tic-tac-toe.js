@@ -2,7 +2,11 @@
 const tic_tac_toe = {
 
     // ATTRIBUTES
-    board: ['', '', '', '', '', '', '', '', ''],
+    board: [
+        '', '', '',
+        '', '', '',
+        '', '', ''
+    ],
     symbols: {
         options: ['O', 'X'],
         turn_index: 0,
@@ -78,5 +82,23 @@ const tic_tac_toe = {
         };
 
         this.container_element.innerHTML = content;
+    },
+
+    jogador_pc: {
+
+        jogar: function (board) {
+            setTimeout(function() {
+                const coord = calcular_posicao(board);
+                mover(board, coord);
+            }, 500);
+        },
+
+        calcular_posicao: function(board) {
+            
+        },
+
+        mover: function(board, coord) {
+
+        },
     },
 };
